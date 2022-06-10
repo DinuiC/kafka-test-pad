@@ -1,0 +1,10 @@
+{
+    "namespace": "com.example.kafkatestpad.avro",
+    "type": "record",
+    "name": "PayloadUser",
+    "fields": [
+      {"name": "title",  "type": "string"},
+      {"name": "name",  "type": "string", "doc": "first name"},
+      {"name": "display_name",  "type": "string"}
+    ]
+  }

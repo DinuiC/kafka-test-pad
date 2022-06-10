@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+app:
+  kafka:
+    producer:
+      topic: kafka-test-pad
+    consumer:
+      topic: kafka-test-pad
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.example.kafkatestpad.kafka.AvroSerializer
+    consumer:
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.BytesDeserializer
+    listener:
+      ack-mode: manual_immediate
+
+auto:
+  create:
+    topics:
+      enable: true

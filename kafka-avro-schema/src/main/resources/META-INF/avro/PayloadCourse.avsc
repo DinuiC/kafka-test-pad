@@ -1,0 +1,10 @@
+{
+    "namespace": "com.example.kafkatestpad.avro",
+    "type": "record",
+    "name": "PayloadCourse",
+    "fields": [
+      {"name": "id", "type": "long", "doc": "Course ID"},
+      {"name": "title",  "type": "string" },
+      {"name": "url",  "type": "string" }
+    ]
+  }
